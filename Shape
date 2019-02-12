@@ -1,0 +1,11 @@
+package batkovna;
+
+public abstract class Shape {
+	abstract double getPerimetr();
+	abstract double getArea();
+
+	public double calcSide(Point x, Point y) {
+		return (Math.round((Math.sqrt(Math.pow((y.getX() + x.getX()), 2) + Math.pow((y.getY() + x.getY()), 2)))));
+	}
+
+}
