@@ -1,0 +1,17 @@
+package batkovna;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Triangular trOne = new Triangular(1.8, 4.5, 2.1);
+		Square sqOne = new Square(7.0, 7.0);
+		Circle cOne = new Circle(1.2, 2.1);
+		
+		Board bOne = new Board();
+		bOne.putBoard(trOne);
+		bOne.putBoard(sqOne);
+		bOne.putBoard(cOne);
+		
+		bOne.information();
+	}
+}
