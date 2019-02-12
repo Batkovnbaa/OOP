@@ -1,0 +1,39 @@
+package batkovna;
+
+public class Triangular extends Shape{
+	Point x = new Point();
+	Point y = new Point();
+	Point z = new Point();
+	
+	public Triangular(Point x, Point y, Point z) {
+		super();
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+
+	public Triangular() {
+		super();
+	}
+	
+	public Triangular(double d, double e, double f) {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double getPerimetr() {
+		return calcSide(x, y) + calcSide(y, z) + calcSide(z, x);
+	}
+
+	@Override
+	public double getArea() {
+		double polP = (calcSide(x, y) + calcSide(y, z) + calcSide(z, x)) / 2;
+		return Math.sqrt(polP * (polP - calcSide(x, y)) * (polP - calcSide(y, z)) * (polP - calcSide(z, x)));
+	}
+
+	@Override
+	public String toString() {
+		return "Triangular [x=" + x + ", y=" + y + ", z=" + z + ", getPerimetr()=" + getPerimetr() + ", getArea()="
+				+ getArea() + "]";
+	}
+}
